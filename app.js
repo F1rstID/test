@@ -1,5 +1,4 @@
 require('dotenv').config()
-const http = require('http');
 const express = require('express');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
