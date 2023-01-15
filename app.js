@@ -1,6 +1,7 @@
 require('dotenv').config()
 const express = require('express');
 const jwt = require('jsonwebtoken');
+const cors = require('cors');
 const { Member } = require('./models');
 
 const app = express();
@@ -8,6 +9,7 @@ const app = express();
 const port = 3010;
 
 app.use(express.json());
+app.use(cors());
 app.post('/members/login', async (req, res) => {
   try {
     const { memberId, password } = req.body;
